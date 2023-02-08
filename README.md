@@ -5,11 +5,22 @@
 
 <p align="center">
 <a href="./LICENSE.md"><img src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
-<a href="https://github.com/dylanaraps/neofetch/releases"><img src="https://img.shields.io/github/release/dylanaraps/neofetch.svg"></a>
 <a href="https://repology.org/metapackage/neofetch"><img src="https://repology.org/badge/tiny-repos/neofetch.svg" alt="Packaging status"></a>
 </p>
 
 <img src="https://i.imgur.com/GFmC5Ad.png" alt="neofetch" align="right" height="240px">
+
+### neofetch-rM Tweaks
+
+- Incorporated Codex Linux with ascii art of rM 
+- Tweak config default to show both / and /home when displaying disk
+- Tweaked function which checks for battery percentage to report on any power supply in /sys/class/power_supply/
+
+### neofetch-rM Limitations
+
+- Images do not work as there is no w3m support
+- No information on fonts
+- May not function correctly on any other device
 
 Neofetch is a command-line system information tool written in `bash 3.2+`. Neofetch displays information about your operating system, software and hardware in an aesthetic and visually pleasing way.
 
@@ -24,4 +35,4 @@ You can further configure Neofetch to display exactly what you want it to. Throu
 Neofetch supports almost 150 different operating systems. From Linux to Windows, all the way to more obscure operating systems like Minix, AIX and Haiku. If your favourite operating system is unsupported: Open up an issue and support will be added.
 
 
-### More: \[[Dependencies](https://github.com/dylanaraps/neofetch/wiki/Dependencies)\] \[[Installation](https://github.com/dylanaraps/neofetch/wiki/Installation)\] \[[Wiki](https://github.com/dylanaraps/neofetch/wiki)\]
+### More: \[[Wiki](https://github.com/dylanaraps/neofetch/wiki)\]
