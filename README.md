@@ -1,5 +1,7 @@
+![neofetch-rM](https://user-images.githubusercontent.com/122753594/217414018-aebbabf9-b311-467e-bfdc-12b24a90d3b4.png)
 <h3 align="center"><img src="https://i.imgur.com/ZQI2EYz.png" alt="logo" height="100px"></h3>
 <p align="center">A command-line system information tool written in bash 3.2+</p>
+<p align="center">Ported to ReMarkable Tablet</p>
 
 <p align="center">
 <a href="./LICENSE.md"><img src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
