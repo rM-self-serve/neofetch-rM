@@ -2,7 +2,6 @@
 # vim: noai:ts=4:sw=4:expandtab
 # shellcheck source=/dev/null
 # shellcheck disable=2009
-# shellcheck disable=SC2153
 #
 # Neofetch: A command-line system information tool written in bash 3.2+.
 # https://github.com/dylanaraps/neofetch
@@ -75,8 +74,8 @@ print_info() {
     info "Memory" memory
 
     # info "GPU Driver" gpu_driver  # Linux/macOS only
-    # info "Disk" disk
-    # info "Battery" battery
+    info "Disk" disk
+    info "Battery" battery
     # info "Font" font
     # info "Song" song
     # [[ "$player" ]] && prin "Music Player" "$player"
@@ -446,7 +445,7 @@ de_version="on"
 #      'Disk (/): 74G / 118G (66%)'
 # 
 # Default to / and /home; reMarkable specific
-disk_show=('/' '/home')
+disk_show=('/home')
 
 # Disk subtitle.
 # What to append to the Disk subtitle.
@@ -786,7 +785,7 @@ image_source="auto"
 #       ArcoLinux, ArchBox, ARCHlabs, ArchStrike, XFerience, ArchMerge, Arch,
 #       Artix, Arya, Bedrock, Bitrig, BlackArch, BLAG, BlankOn, BlueLight,
 #       Bodhi, bonsai, BSD, BunsenLabs, Calculate, Carbs, CentOS, Chakra, ChaletOS,
-#       Chapeau, Chrom*, Cleanjaro, ClearOS, Clear_Linux, Clover, Condres,
+#       Chapeau, Chrom*, Cleanjaro, ClearOS, Clear_Linux, Clover, Codex, Condres,
 #       Container_Linux, Crystal Linux, CRUX, Cucumber, dahlia, Debian, Deepin,
 #       DesaOS, Devuan, DracOS, DarkOs, Itc, DragonFly, Drauger, Elementary,
 #       EndeavourOS, Endless, EuroLinux, Exherbo, Fedora, Feren, FreeBSD,
@@ -974,9 +973,10 @@ get_distro() {
 	Linux | BSD | MINIX)
 		if [[ -f /etc/os-release ]] && grep -iq codex /etc/os-release; then
 			. /etc/os-release
+			fallback='Codex Linux'
 			case $distro_shorthand in
-			on | tiny) distro="${NAME}" ;;
-			off) distro="${PRETTY_NAME}" ;;
+			on | tiny) distro="${NAME:-${fallback}}" ;;
+			off) distro="${PRETTY_NAME:-${fallback}}" ;;
 			esac
 
 		elif [[ -f /bedrock/etc/bedrock-release && -z $BEDROCK_RESTRICT ]]; then
@@ -1725,13 +1725,13 @@ get_packages() {
 
 get_shell() {
 	case $shell_path in
-	on) shell="$SHELL " ;;
-	off) shell="${SHELL##*/} " ;;
+	on) shell="$BASH " ;;
+	off) shell="${BASH##*/} " ;;
 	esac
 
 	[[ $shell_version != on ]] && return
 
-	case ${shell_name:=${SHELL##*/}} in
+	case ${shell_name:=${BASH##*/}} in
 	bash)
 		[[ $BASH_VERSION ]] ||
 			BASH_VERSION=$("$SHELL" -c "printf %s \"\$BASH_VERSION\"")
@@ -5529,10 +5529,10 @@ ${c2}@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @@@@@@@@@@@@${c1}!B@&&&!${c2}@@@@@@@@@@${c1}5@&@#?:${c2}@
 @@@@@@@@@@@@@${c1}~@@@@@?${c2}@@@@@@@${c1}.G@@@@P${c2}@@@
 @@@@@${c1}..${c2}@${c1}.^^.${c2}@${c1}~@##@@@Y${c2}@@@@@${c1}:B&B@@@P${c2}@@@
-@${c1}^7YG&YJ&@@!${c2}@${c1}~@P^#@@@5.${c2}@@${c1}^##:5@@@P${c2}@@@
-@${c1}^P@@@P77YJ${c2}@@${c1}~@G${c2}@${c1}:B@@@G.~&G.${c2}@${c1}P@@@P${c2}@@@
-@@${c1}7@@@J${c2}@@@@@@${c1}~@G${c2}@@${c1}.G@@@#&5.${c2}@@${c1}P@@@P${c2}@@@
-@@${c1}7@@@J${c2}@@@@@@${c1}~@G${c2}@@@@${c1}5@@@J${c2}@@@@${c1}P@@@P${c2}@@@
+@${c1}^7YG&YJ&@@!${c2}@${c1}~@P^#@@@5.${c2}@@${c1}^##:Y@@@P${c2}@@@
+@${c1}^5@@@P77YJ${c2}@@${c1}~@G${c2}@${c1}:B@@@G.~&G.${c2}@${c1}7@@@P${c2}@@@
+@@${c1}7@@@J${c2}@@@@@@${c1}~@G${c2}@@${c1}.G@@@#&5.${c2}@@${c1}7@@@P${c2}@@@
+@@${c1}7@@@J${c2}@@@@@@${c1}~@G${c2}@@@@${c1}5@@@J${c2}@@@@${c1}7@@@P${c2}@@@
 @@${c1}?@@@Y${c2}@@@@@@${c1}!@B.${c2}@@@@${c1}Y&7${c2}@@@@@${c1}G@@@B.${c2}@@
 @${c1}~5GGGPJ^${c2}@@${c1}.7PGGY^${c2}@@@@@@@@@${c1}^YGGGGGY^${c2}@
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@

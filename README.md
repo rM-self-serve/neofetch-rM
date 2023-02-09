@@ -1,4 +1,4 @@
-![neofetch-rM](https://user-images.githubusercontent.com/122753594/217414018-aebbabf9-b311-467e-bfdc-12b24a90d3b4.png)
+![neofetch-rM](https://user-images.githubusercontent.com/122753594/217943485-ae9db043-51dc-496c-8681-ef4658f16a09.png)
 <h3 align="center"><img src="https://i.imgur.com/ZQI2EYz.png" alt="logo" height="100px"></h3>
 <p align="center">A command-line system information tool written in bash 3.2+</p>
 <p align="center">Ported to ReMarkable Tablet</p>
@@ -10,17 +10,35 @@
 
 <img src="https://i.imgur.com/GFmC5Ad.png" alt="neofetch" align="right" height="240px">
 
-### neofetch-rM Tweaks
+## neofetch-rM Tweaks
 
-- Incorporated Codex Linux with ascii art of rM 
-- Tweak config default to show both / and /home when displaying disk
-- Tweaked function which checks for battery percentage to report on any power supply in /sys/class/power_supply/
+- Codex Linux with ascii art of rM 
+- Tweak config default to show /home when displaying disk
+- Tweak shell function to show bash version
+- Tweak battery function to report on any power supply in /sys/class/power_supply/
 
-### neofetch-rM Limitations
+## neofetch-rM Limitations
 
 - Images do not work as there is no w3m support
-- No information on fonts
+- Shell will display bash even if using sh
 - May not function correctly on any other device
+
+## Install
+
+`$ wget https://raw.githubusercontent.com/rM-self-serve/neofetch-rM/master/install-neofetch-rM.sh && bash install-neofetch-rM.sh`
+
+## Remove
+
+`$ wget https://raw.githubusercontent.com/rM-self-serve/neofetch-rM/master/remove-neofetch-rM.sh && bash remove-neofetch-rM.sh`
+
+## Use
+
+`$ source ~/.bashrc` 
+-  Only the first time
+
+`$ neofetch`
+
+## Original Description
 
 Neofetch is a command-line system information tool written in `bash 3.2+`. Neofetch displays information about your operating system, software and hardware in an aesthetic and visually pleasing way.
 
