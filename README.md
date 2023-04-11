@@ -23,13 +23,28 @@
 - Shell will display bash even if using sh
 - May not function correctly on any other device
 
-## Install
 
-`$ wget https://raw.githubusercontent.com/rM-self-serve/neofetch-rM/master/install-neofetch-rM.sh && bash install-neofetch-rM.sh`
+## Installation/Removal
 
-## Remove
+**It is reccomended to install via the [toltec package manager](https://toltec-dev.org/).** 
 
-`$ wget https://raw.githubusercontent.com/rM-self-serve/neofetch-rM/master/remove-neofetch-rM.sh && bash remove-neofetch-rM.sh`
+#### With toltec
+
+```
+opkg update
+opkg install neofetch
+opkg remove neofetch
+```
+
+#### No toltec
+
+Install
+
+- `wget https://raw.githubusercontent.com/rM-self-serve/neofetch-rM/master/install-neofetch-rM.sh && bash install-neofetch-rM.sh`
+
+Remove
+
+- `wget https://raw.githubusercontent.com/rM-self-serve/neofetch-rM/master/remove-neofetch-rM.sh && bash remove-neofetch-rM.sh`
 
 ## Use
 
