@@ -57,6 +57,7 @@ print_info() {
 
     info "OS" distro
     info "Host" model
+    info "Xochitl" xochitl
     info "Kernel" kernel
     info "Uptime" uptime
     info "Packages" packages
@@ -1393,6 +1394,17 @@ get_title() {
 
 	title=${title_color}${bold}${user}${at_color}@${title_color}${bold}${hostname}
 	length=$((${#user} + ${#hostname} + 1))
+}
+
+get_xochitl() {
+    conf_file='/usr/share/remarkable/update.conf'
+	if ! [ -f $conf_file ]; then
+		echo "Error: Can't find ${conf_file}"
+		exit 1
+	fi
+	xo_version=$(grep 'REMARKABLE_RELEASE_VERSION' $conf_file | grep -oE '[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+')
+	IFS=. read -r versA versB versC versD <<<"$xo_version"
+    xochitl="v${versA}.${versB}.${versC}.${versD}"
 }
 
 get_kernel() {
@@ -5443,6 +5455,7 @@ get_args() {
 
 				info "OS" distro
 				info "Host" model
+				info "Xochitl" xochitl
 				info "Kernel" kernel
 				info "Uptime" uptime
 				info "Packages" packages
@@ -5487,7 +5500,7 @@ get_args() {
 
 			# Known implicit unused variables.
 			mpc_args=()
-			printf '%s\n' "$kernel $icons $font $battery $locale ${mpc_args[*]}"
+			printf '%s\n' "$xochitl $kernel $icons $font $battery $locale ${mpc_args[*]}"
 			;;
 		esac
 

@@ -12,7 +12,8 @@
 
 ## neofetch-rM Tweaks
 
-- Codex Linux with ascii art of rM 
+- Codex Linux with ascii art of rM
+- Xochitl software version
 - Tweak config default to show /home when displaying disk
 - Tweak shell function to show bash version
 - Tweak battery function to report on any power supply in /sys/class/power_supply/
@@ -23,28 +24,13 @@
 - Shell will display bash even if using sh
 - May not function correctly on any other device
 
+## Install
 
-## Installation/Removal
+`$ wget https://raw.githubusercontent.com/rM-self-serve/neofetch-rM/master/install-neofetch-rM.sh && bash install-neofetch-rM.sh`
 
-**It is reccomended to install via the [toltec package manager](https://toltec-dev.org/).** 
+## Remove
 
-#### With toltec
-
-```
-opkg update
-opkg install neofetch
-opkg remove neofetch
-```
-
-#### No toltec
-
-Install
-
-- `wget https://raw.githubusercontent.com/rM-self-serve/neofetch-rM/master/install-neofetch-rM.sh && bash install-neofetch-rM.sh`
-
-Remove
-
-- `wget https://raw.githubusercontent.com/rM-self-serve/neofetch-rM/master/remove-neofetch-rM.sh && bash remove-neofetch-rM.sh`
+`$ wget https://raw.githubusercontent.com/rM-self-serve/neofetch-rM/master/remove-neofetch-rM.sh && bash remove-neofetch-rM.sh`
 
 ## Use
 
