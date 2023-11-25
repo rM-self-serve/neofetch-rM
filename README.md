@@ -1,4 +1,4 @@
-![neofetch-rM](https://user-images.githubusercontent.com/122753594/217943485-ae9db043-51dc-496c-8681-ef4658f16a09.png)
+![neofetch-rM](https://github.com/rM-self-serve/webinterface-wifi/assets/122753594/6d3e3492-c5a4-4cb0-8900-f6d42ef21197)
 <h3 align="center"><img src="https://i.imgur.com/ZQI2EYz.png" alt="logo" height="100px"></h3>
 <p align="center">A command-line system information tool written in bash 3.2+</p>
 <p align="center">Ported to ReMarkable Tablet</p>
