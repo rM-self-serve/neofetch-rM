@@ -1,4 +1,8 @@
-![neofetch-rM](https://github.com/rM-self-serve/webinterface-wifi/assets/122753594/a4767435-e14b-46bc-852e-91c879fc80ab)
+![Static Badge](https://img.shields.io/badge/rMarkable-v3.8-green)
+![rM1: supported](https://img.shields.io/badge/rM1-supported-green)
+![rM2: supported](https://img.shields.io/badge/rM2-supported-green)
+
+![neofetch-rM](https://github.com/rM-self-serve/webinterface-wifi/assets/122753594/6d3e3492-c5a4-4cb0-8900-f6d42ef21197)
 <h3 align="center"><img src="https://i.imgur.com/ZQI2EYz.png" alt="logo" height="100px"></h3>
 <p align="center">A command-line system information tool written in bash 3.2+</p>
 <p align="center">Ported to ReMarkable Tablet</p>
