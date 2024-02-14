@@ -1,6 +1,8 @@
 ![Static Badge](https://img.shields.io/badge/reMarkable-v3.9.4-green)
-![rM1: supported](https://img.shields.io/badge/rM1-supported-green)
-![rM2: supported](https://img.shields.io/badge/rM2-supported-green)
+[![rm1](https://img.shields.io/badge/rM1-supported-green)](https://remarkable.com/store/remarkable)
+[![rm2](https://img.shields.io/badge/rM2-supported-green)](https://remarkable.com/store/remarkable-2)
+[![opkg](https://img.shields.io/badge/OPKG-neofetch-blue)](https://toltec-dev.org/)
+[![Discord](https://img.shields.io/discord/385916768696139794.svg?label=reMarkable&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/ATqQGfu)
 
 ![neofetch-rM](https://github.com/rM-self-serve/webinterface-wifi/assets/122753594/6d3e3492-c5a4-4cb0-8900-f6d42ef21197)
 <h3 align="center"><img src="https://i.imgur.com/ZQI2EYz.png" alt="logo" height="100px"></h3>
