@@ -3809,6 +3809,7 @@ get_battery() {
 	# Don't worry about other operating systems
 	# Check any available power supply
 	# For ReMarkable Tablet
+    index=0
 	for bat in "/sys/class/power_supply/"*; do
 		capacity="$(<"${bat}/capacity")"
 		status="$(<"${bat}/status")"
@@ -3820,7 +3821,8 @@ get_battery() {
 			"barinfo") battery="$(bar "$capacity" 100)${info_color} ${battery}" ;;
 			esac
 			bat="${bat/*axp288_fuel_gauge/}"
-			prin "${subtitle:+${subtitle}${bat: -1}}" "$battery"
+			prin "${subtitle:+${subtitle}$index}" "$battery"
+            ((index++))
 		fi
 	done
 	case $battery_display in
