@@ -30,6 +30,20 @@
 - Shell will display bash even if using sh
 - May not function correctly on any other device
 
+## Installation/Removal
+
+**It is recommended to install via the [toltec package manager](https://toltec-dev.org/).** 
+
+### With toltec
+
+```
+$ opkg update
+$ opkg install neofetch 
+$ opkg remove neofetch 
+```
+
+### No toltec
+
 ## Install
 
 `$ wget https://raw.githubusercontent.com/rM-self-serve/neofetch-rM/master/install-neofetch-rM.sh && bash install-neofetch-rM.sh`
